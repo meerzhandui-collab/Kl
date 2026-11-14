@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Айпери & Азимбек | Классташтарга чакыруу</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+    radial-gradient(circle at top, #55401d, #100d0a 75%);
+    font-family: Georgia, serif;
+    color: #f5dfaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seal {
+    width: 270px;
+    height: 190px;
+    margin: auto;
+    background: linear-gradient(145deg,#d7b66b,#7e571c);
+    border: 2px solid #f8e3a5;
+    border-radius: 10px;
+    box-shadow: 0 0 35px #c99b3b66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.seal::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid #fff0be;
+}
+
+.seal h1 {
+    color: #fff7df;
+    font-size: 29px;
+    text-shadow: 0 2px 10px #54320a;
+    z-index: 2;
+}
+
+.tap {
+    margin-top: 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    50% { opacity: .4; }
+}
+
+.invitation {
+    display: none;
+    width: 100%;
+    background: linear-gradient(145deg,#fff9e9,#ead9b3);
+    color: #493316;
+    padding: 35px 22px;
+    border: 5px double #b18a43;
+    outline: 1px solid #e6c77c;
+    box-shadow: 0 0 40px #e3bd6b55;
+    text-align: center;
+    animation: appear 2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.top {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #98702d;
+}
+
+.ornament {
+    font-size: 28px;
+    color: #ad8439;
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #8b6427;
+    margin: 15px 0;
+}
+
+.names {
+    font-size: 32px;
+    color: #9a702c;
+    margin: 22px 0;
+    font-weight: bold;
+}
+
+.poem {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 20px 0;
+}
+
+.date {
+    font-size: 25px;
+    color: #9a702c;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.details {
+    font-size: 15px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #98702d;
+    font-style: italic;
+}
+
+.music {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #c5a15b;
+    color: #25180a;
+    border: 1px solid #ffe8a8;
+    border-radius: 30px;
+    padding: 12px 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="envelope" id="envelope" onclick="openCard()">
+    <div class="seal">
+        <h1>АЙПЕРИ<br>&<br>АЗИМБЕК</h1>
+    </div>
+    <div class="tap">✦ ЧАКЫРУУ КАТЫН АЧЫҢЫЗ ✦</div>
+</div>
+
+<div class="invitation" id="invitation">
+
+<div class="top">АСЫЛ КЛАССТАШТАРЫБЫЗГА</div>
+
+<div class="ornament">❦ ✧ ❦</div>
+
+<h2>КЫМБАТТУУ КЛАССТАШТАР!</h2>
+
+<div class="poem">
+Бирге өткөн балалыктын күндөрү — жүрөктө,<br>
+Классташтык достугубуз сакталат түбөлүккө.<br>
+Жылдар өтсө дагы силер бизге кымбатсыңар,<br>
+Кубанычтуу күнүбүздө төрүбүздөн орун алгыла!
+</div>
+
+<div class="ornament">✧ ❦ ✧</div>
+
+<div class="names">
+АЙПЕРИ & АЗИМБЕК
+</div>
+
+<h2>ҮЙ ТОЙ • КЕЛИН ТОЙ</h2>
+
+<div class="date">
+25 НОЯБРЬ 2026
+</div>
+
+<div class="ornament">❦</div>
+
+<div class="details">
+
+<strong>ТОЙ ЭЭЛЕРИ:</strong><br>
+Бубайым • Айгүл • Нуржигит
+
+<br><br>
+
+<strong>ДАРЕГИБИЗ:</strong><br>
+Кара-Жыгач, Жаңы садиктин жанында.
+
+</div>
+
+<div class="footer">
+Классташтык достуктун урматына,<br>
+кубанычыбызга ортоктош болуп кетиңиздер! ❤️
+</div>
+
+<div class="ornament">❦ ✧ ❦</div>
+
+</div>
+</div>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" id="musicButton" onclick="toggleMusic()">
+🎵 Музыка
+</button>
+
+<script>
+
+function openCard() {
+    document.getElementById("envelope").style.display = "none";
+
+    document.getElementById("invitation").style.display = "block";
+
+    const music = document.getElementById("music");
+
+    music.play().catch(() => {
+        alert("Музыканы баштоо үчүн музыка баскычын басыңыз.");
+    });
+}
+
+function toggleMusic() {
+    const music = document.getElementById("music");
+
+    if (music.paused) {
+        music.play();
+        document.getElementById("musicButton").innerHTML = "⏸ Музыка";
+    } else {
+        music.pause();
+        document.getElementById("musicButton").innerHTML = "🎵 Музыка";
+    }
+}
+
+</script>
+
+</body>
+</html>
